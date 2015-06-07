@@ -14,7 +14,7 @@ The column-store database features a faster data reading speed and higher data c
 
 ## Acknowledgement
 
-Thanks to all the reviewers for your insightful review comments for this paper. Your great help is essential for this work.
+Thanks to all the reviewers for your insightful comments for this paper. Your great help is essential for this work.
 
 
 
