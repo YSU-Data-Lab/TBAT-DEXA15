@@ -1,7 +1,7 @@
 # TBAT-DEXA15
 
 
-## Experiment code for "A Framework of Write Optimization on Read-Optimized Out-of-Core Column-Store Databases" @ DEXA'15
+Experiment code for **"A Framework of Write Optimization on Read-Optimized Out-of-Core Column-Store Databases"** @ [26th International Conference on Database and Expert Systems Applications (DEXA'15)](http://www.dexa.org)
 
 ## Authors
 
