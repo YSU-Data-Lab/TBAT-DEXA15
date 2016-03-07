@@ -6,7 +6,7 @@ Experiment code for **"A Framework of Write Optimization on Read-Optimized Out-o
 ## Authors
 
 * Feng Yu <fyu@ysu.edu>, Computer Science and Information Systems, Youngstown State University, Youngstown, OH 44555
-* Wen-Chi Hou <hou@cs.ysu.edu>, Computer Science, Southern Illinois University, Carbondale, IL 62901
+* Wen-Chi Hou <hou@cs.siu.edu>, Computer Science, Southern Illinois University, Carbondale, IL 62901
 
 ## Abstract
 
