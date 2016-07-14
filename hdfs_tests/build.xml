@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project basedir="." default="build" name="hdfs_tests">
+    <property environment="env"/>
+    <property name="debuglevel" value="source,lines,vars"/>
+    <property name="target" value="1.7"/>
+    <property name="source" value="1.7"/>
+    <path id="hdfs_tests.classpath">
+        <pathelement location="."/>
+    </path>
+    <target name="init">
+        <copy includeemptydirs="false" todir=".">
+            <fileset dir=".">
+                <exclude name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="clean">
+        <delete>
+            <fileset dir="." includes="**/*.class"/>
+        </delete>
+    </target>
+    <target depends="clean" name="cleanall"/>
+    <target depends="build-subprojects,build-project" name="build"/>
+    <target name="build-subprojects"/>
+    <target depends="init" name="build-project">
+        <echo message="${ant.project.name}: ${ant.file}"/>
+        <javac debug="true" debuglevel="${debuglevel}" destdir="." includeantruntime="false" source="${source}" target="${target}">
+            <src path="."/>
+            <classpath refid="hdfs_tests.classpath"/>
+        </javac>
+    </target>
+    <target description="Build all projects which reference this project. Useful to propagate changes." name="build-refprojects"/> 
+</project>
+
+
+<!--    <target name="exp_update">
+        <java classname="exp_update.exp_update" failonerror="true" fork="yes">
+            <arg line="1000 10 0.1 0.2 0.3 0.4 0.5"/>
+            <classpath refid="column-store-tbat-java.classpath"/>
+        </java>
+    </target>
+    <target name="test2">
+        <java classname="test1.test2" failonerror="true" fork="yes">
+            <classpath refid="column-store-tbat-java.classpath"/>
+        </java>
+    </target>
+    <target name="test_create_bat_tbat1">
+        <java classname="test1.test_create_bat_tbat1" failonerror="true" fork="yes">
+            <classpath refid="column-store-tbat-java.classpath"/>
+        </java>
+    </target>
+    <target name="test_create_update_list">
+        <java classname="test1.test_create_update_list" failonerror="true" fork="yes">
+            <classpath refid="column-store-tbat-java.classpath"/>
+        </java>
+    </target>
+    <target name="test_loop">
+        <java classname="test1.test_loop" failonerror="true" fork="yes">
+            <classpath refid="column-store-tbat-java.classpath"/>
+        </java>
+    </target>
+    <target name="test_print">
+        <java classname="test1.test_print" failonerror="true" fork="yes">
+            <classpath refid="column-store-tbat-java.classpath"/>
+        </java>
+    </target>
+    <target name="test_update_bat1">
+        <java classname="test1.test_update_bat1" failonerror="true" fork="yes">
+            <classpath refid="column-store-tbat-java.classpath"/>
+        </java>
+    </target>
+    <target name="test_update_bat2">
+        <java classname="test1.test_update_bat2" failonerror="true" fork="yes">
+            <classpath refid="column-store-tbat-java.classpath"/>
+        </java>
+    </target>
+    <target name="test_update_tbat">
+        <java classname="test1.test_update_tbat" failonerror="true" fork="yes">
+            <classpath refid="column-store-tbat-java.classpath"/>
+        </java>
+    </target> -->

@@ -11,4 +11,5 @@
 *.pyc
 *.bak
 
-
+# 8200
+hdfs_tests/data/*.txt
